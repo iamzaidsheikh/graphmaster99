@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<DialogPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.iamzaid.InputDialogController">
+   <content>
+      <GridPane hgap="20.0" vgap="20.0">
+          <Label text="Input 1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          <Label text="Input 2" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+          <Label text="Waveform" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+          <Label text="Amplitude" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+          <Label text="Phase (pi radians)" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+          <ComboBox fx:id="input1Waveform" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#getWave1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Sin wave"/>
+                        <String fx:value="Cos wave"/>
+                    </FXCollections>
+                </items>
+          </ComboBox>
+          <ComboBox fx:id="input2Waveform" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#getWave2">
+              <items>
+                  <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Sin wave"/>
+                  <String fx:value="Cos wave"/>
+                  </FXCollections>
+              </items>
+          </ComboBox>
+          <TextField fx:id="input1Amplitude" text="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <TextField fx:id="input1Phase" text="0.5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <TextField fx:id="input2Amplitude" text="100" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+          <TextField fx:id="input2Phase" text="1.2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         <padding>
+            <Insets top="20.0"/>
+         </padding>
+      </GridPane>
+   </content>
+</DialogPane>
